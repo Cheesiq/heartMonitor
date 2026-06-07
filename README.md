@@ -4,7 +4,7 @@ Neuro-symbolic emergency detection and response system for wearable devices.
 
 ## Problem
 
-Conventional smartwatch emergency systems often depend on a single signal (like fall detection or static thresholds), which can increase false alarms and miss gradual-onset emergencies.
+Conventional smartwatch emergency systems often depend on a single signal (like fall detection or static thresholds), which can increase false alarms and miss gradual-onset emergencies. A core program objective is to reduce false positives versus threshold-only baselines while improving detection of progressive, non-fall events.
 
 ## Solution Summary
 
@@ -161,11 +161,16 @@ Notify User / Contact / Emergency Services
 
 ## Development Roadmap
 
-- **Phase 1:** Sensor ingestion pipeline, data schema, symbolic rule framework
-- **Phase 2:** Anomaly model training and confidence scoring
-- **Phase 3:** Truth-resolution implementation and contradiction testing
-- **Phase 4:** Smartwatch integration and escalation orchestration
-- **Phase 5:** Validation studies and false-positive analysis
+- **Phase 1 (4-6 weeks):** Sensor ingestion pipeline, data schema, symbolic rule framework.  
+  *Exit criteria:* reproducible multi-sensor ingestion and executable baseline rule set.
+- **Phase 2 (6-8 weeks):** Anomaly model training and confidence scoring.  
+  *Exit criteria:* model outputs calibrated event probabilities with confidence telemetry.
+- **Phase 3 (4-6 weeks):** Truth-resolution implementation and contradiction testing.  
+  *Exit criteria:* deterministic conflict handling across predefined contradictory scenarios.
+- **Phase 4 (6-8 weeks):** Smartwatch integration and escalation orchestration.  
+  *Exit criteria:* end-to-end escalation flow verified from wearable input to alert actions.
+- **Phase 5 (6-10 weeks):** Validation studies and false-positive analysis.  
+  *Exit criteria:* comparative evaluation completed against baseline emergency detection logic.
 
 ## IP Notes
 
@@ -177,4 +182,4 @@ Before public disclosure:
 4. Perform prior-art searches
 5. Consider patent filing before publication
 
-Potentially protectable elements include: (a) the specific pipeline that gates neural event predictions through symbolic rule validation, (b) the confidence-weighted truth-resolution method that resolves contradictory evidence into a single risk score, and (c) explainable emergency outputs that enumerate the evidence chain used for escalation.
+Potentially protectable elements include: (a) the specific pipeline that gates neural event predictions through symbolic rule validation (Novelty Area 1), (b) the confidence-weighted truth-resolution method that resolves contradictory evidence into a single risk score (Novelty Areas 2-3), and (c) explainable emergency outputs that enumerate the evidence chain used for escalation in context-aware and staged response flows (Novelty Areas 4-6).
