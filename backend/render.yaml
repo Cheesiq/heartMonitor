@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: heartmonitor-mvp
+    runtime: docker
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /health

@@ -2,6 +2,29 @@
 
 Neuro-symbolic emergency detection and response system for wearable devices.
 
+For a formal, patent-oriented write-up, see [INVENTION_DISCLOSURE_DRAFT.md](INVENTION_DISCLOSURE_DRAFT.md).
+For an Android smartwatch starter implementation, see [wearos/README.md](wearos/README.md).
+For the free backend API used by the watch app, see [backend/README.md](backend/README.md).
+
+## MVP Status
+
+This repository now includes an end-to-end MVP:
+
+- Wear OS monitoring app with continuous risk evaluation
+- Neuro-symbolic decision pipeline on-device
+- Backend API with SQLite persistence
+- Global push notifications through ntfy topics (free)
+- Free-deployment scaffolding for Render/Fly.io
+
+## Free Global Rollout
+
+1. Deploy the backend from `backend/` to a free host.
+2. Register each user with a unique ntfy topic using `/v1/users/register`.
+3. Have users subscribe to their topic with the ntfy app or website.
+4. Point each watch client to the deployed backend URL.
+
+This keeps recurring cost near zero for MVP-scale usage while remaining globally accessible.
+
 ## Problem
 
 Conventional smartwatch emergency systems often depend on a single signal (like fall detection or static thresholds), which can increase false alarms and miss gradual-onset emergencies.
