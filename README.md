@@ -24,7 +24,7 @@ Neural predictions are not used alone; they are validated and contextualized by 
 
 - Heart rate
 - Heart rate variability (HRV)
-- Blood oxygen saturation (SpO₂)
+- Blood oxygen saturation (SpO2)
 - Skin temperature
 - Accelerometer
 - Gyroscope
@@ -64,6 +64,7 @@ Example output:
 
 ```text
 Possible Cardiac Event
+Candidate event types: arrhythmia, tachycardia, bradycardia
 Confidence: 72%
 ```
 
@@ -78,7 +79,7 @@ THEN increase emergency score
 ```
 
 ```text
-IF SpO₂ < 85%
+IF SpO2 < 85%
 AND temperature elevated
 THEN increase respiratory distress score
 ```
@@ -100,7 +101,7 @@ Cardiac Event = 0.72
 
 Symbolic Layer:
 No Fall Detected = -0.10
-SpO₂ Critical = +0.25
+SpO2 Critical = +0.25
 
 Final Score:
 0.87
@@ -121,7 +122,7 @@ Emergency decisions should include an explicit rationale, for example:
 Emergency Triggered
 
 Reasons:
-- SpO₂ below 82%
+- SpO2 below 82%
 - No movement for 7 minutes
 - Elevated skin temperature
 - High cardiac anomaly confidence
@@ -129,12 +130,12 @@ Reasons:
 
 ## Novelty Areas for Investigation
 
-1. Hybrid neural-symbolic emergency reasoning
-2. Truth-resolution for conflicting sensor evidence
-3. Dynamic confidence weighting
-4. Context-aware emergency classification
-5. Multi-stage escalation
-6. Explainable emergency decisions
+1. Hybrid neural-symbolic emergency reasoning where symbolic safety constraints verify neural predictions before escalation.
+2. Truth-resolution for conflicting evidence that explicitly combines positive and negative rule evidence with neural outputs.
+3. Dynamic confidence weighting that adapts influence of each signal stream by context and data quality.
+4. Context-aware emergency classification that incorporates user interaction, motion, and environment with physiology.
+5. Multi-stage escalation logic that maps calibrated risk intervals to progressively stronger interventions.
+6. Explainable emergency decisions that return machine-generated rationale tied to contributing sensor/rule evidence.
 
 ## Example Workflow
 
@@ -176,4 +177,4 @@ Before public disclosure:
 4. Perform prior-art searches
 5. Consider patent filing before publication
 
-Potentially protectable elements are likely to center on the neuro-symbolic architecture, confidence-weighted truth resolution, and explainable emergency decisioning.
+Potentially protectable elements include: (a) the specific pipeline that gates neural event predictions through symbolic rule validation, (b) the confidence-weighted truth-resolution method that resolves contradictory evidence into a single risk score, and (c) explainable emergency outputs that enumerate the evidence chain used for escalation.
