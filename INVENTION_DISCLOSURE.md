@@ -4,9 +4,9 @@
 
 - Invention title: Neuro-Symbolic Emergency Detection and Response System for Wearable Devices
 - Disclosure date: 7 June 2026
-- Inventor(s): [Insert name(s)]
-- Assignee/owner: [Insert company/entity]
-- Disclosure status: Confidential and proprietary
+- Inventor(s): Jordan Nickless
+- Assignee/owner: Orangopus
+- Disclosure status: Confidential and open-source
 
 ## 2) Technical Field
 
